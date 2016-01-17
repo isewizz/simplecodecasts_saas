@@ -1,7 +1,7 @@
 $(document).ready(function(){
     Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
     //Watch for a form submission:
-    $("form-submit-btn").click(function(event){
+    $("#form-submit-btn").click(function(event){
         event.preventDefault();
         $('input[type=submit]').prop('disabled',true);
         var error = false;
@@ -35,4 +35,4 @@ $(document).ready(function(){
         //Submit the form:
         f.get(0).submit();
     }
-})
+});
